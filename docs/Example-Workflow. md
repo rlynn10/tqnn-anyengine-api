@@ -1,0 +1,123 @@
+# TQNN Example Workflows
+
+Each workflow shows a minimal “copy → paste → run” pattern.
+Replace sample arrays with your real data.
+
+---
+
+# 🧠 EEG Workflow
+
+```python
+from tqnn_client import TQNNClient
+import numpy as np, os
+
+client = TQNNClient(
+    api_key=os.getenv("TQNN_API_KEY"),
+    base_url=os.getenv("TQNN_API_URL")
+)
+
+sfreq = 250.0
+eeg_data = np.random.randn(3, 250).tolist()
+
+res = client.run_any(
+    data=eeg_data,
+    mode="EEG",
+    sfreq=sfreq,
+    label="eeg_demo"
+)
+
+print(res)
+```
+
+---
+
+# 📊 Tabular Workflow
+
+```python
+from tqnn_client import TQNNClient
+import os
+
+client = TQNNClient(
+    api_key=os.getenv("TQNN_API_KEY"),
+    base_url=os.getenv("TQNN_API_URL")
+)
+
+dataset = [
+    [1.2, 0.4, 3.3, 0.1],
+    [2.1, 1.1, 0.9, 0.5],
+    [0.7, 0.3, 1.2, 2.1]
+]
+
+res = client.run_any(
+    data=dataset,
+    mode="TABULAR",
+    label="demo_table"
+)
+
+print(res)
+```
+
+---
+
+# 📈 Finance Workflow
+
+Feed OHLCV + indicators.
+
+```python
+from tqnn_client import TQNNClient
+import os
+
+client = TQNNClient(
+    api_key=os.getenv("TQNN_API_KEY"),
+    base_url=os.getenv("TQNN_API_URL")
+)
+
+# One row = snapshot
+finance_data = [
+   [open, high, low, close, volume, rsi, macd, signal, trend_slope]
+]
+
+res = client.run_any(
+    data=finance_data,
+    mode="FINANCE",
+    label="TSLA"
+)
+
+print(res)
+```
+
+---
+
+# 🖼️ Image Workflow
+
+Flatten or tensor.
+
+```python
+from tqnn_client import TQNNClient
+import numpy as np, os
+
+client = TQNNClient(
+    api_key=os.getenv("TQNN_API_KEY"),
+    base_url=os.getenv("TQNN_API_URL")
+)
+
+img = np.random.rand(784).tolist()
+
+res = client.run_any(
+    data=[img],
+    mode="IMAGE",
+    label="image_demo"
+)
+
+print(res)
+```
+
+---
+
+# 🚨 Notes
+
+- Any 2D numeric array is valid input
+- Model does not train
+- Model does not return gradients
+- All inference is substrate-driven
+- Internal logic remains sealed
