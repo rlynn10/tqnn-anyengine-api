@@ -1,30 +1,39 @@
-TQNN AnyEngine API
+🔹 TQNN AnyEngine API
 
 Public SaaS API for TQNN AnyEngine
-Modes: EEG / Finance / Tabular / Image / Any-Data
+Modes supported: EEG / Finance / Tabular / Image / Any-Data
 
 
 ---
 
-Overview
+🌐 Overview
 
-TQNN — Tubulin Quantum Neural Network is a quantum-inspired computational substrate.
-It transforms incoming data into quantum-state inference embeddings using spiral entanglement and GHZ cobordism models.
+TQNN — Tubulin Quantum Neural Network
+A quantum-inspired computational substrate.
 
-Unlike classical ML:
+It transforms incoming data into quantum-state inference embeddings using:
 
-There are no train/fit loops
+spiral entanglement
 
-There are no gradients
+GHZ cobordism models
 
-There are no weights to tweak
+phase-based decision geometry
 
 
-You send structured data → the substrate returns:
+Unlike classical ML systems:
+
+No train/fit loops
+
+No gradient descent
+
+No weights
+
+
+You send structured data → substrate returns:
 
 inference probabilities
 
-threshold / tau
+phase threshold (tau)
 
 qualia embedding
 
@@ -33,66 +42,81 @@ intent vector
 decision geometry
 
 
-This repository provides only the public API wrapper and examples.
+> This repository provides only the public API wrapper and examples.
 It does not include the TQNN Core substrate logic.
+
+
 
 
 ---
 
-Modes Supported
+🧠 Modes Supported
 
 EEG
 
 Input: (channels x samples) numerical matrix
+
 Output: brain-state basins, coherence bins, intent vectors
+
 
 Tabular
 
 Input: sample matrix
+
 Output: class basin, phase threshold, decision quality
+
 
 Finance
 
 Input: OHLCV, indicators, rolling features
+
 Output: directional probability, phase confidence, action geometry
+
 
 Image (Beta)
 
-Input: flattened or tensor image data
+Input: flattened or tensor image
+
 Output: perceptual probabilities, substrate embed vectors
+
 
 Any structured numeric array can be used as input.
 
 
 ---
 
-Authentication
+🔑 Authentication
 
-Every customer receives a subscription-bound API key.
-Send it using:
+Each customer receives a subscription-bound API key.
+
+Send it in headers:
 
 x-api-key: YOUR_TQNN_API_KEY
 
 Quota is enforced at runtime.
+
 Overages are billed automatically per request.
+
+No internal code is ever exposed.
+
 
 
 ---
 
-Client Installation
+📦 Client Installation
 
-The official Python client will be distributed via PyPI:
+Official PyPI package coming soon:
 
 pip install tqnn-client
 
-Until then, use the provided tqnn_client.py.
+Until release, use the provided tqnn_client.py.
 
 
 ---
 
-Quickstart Example
+🚀 Quickstart Example
 
-Tabular request example:
+Tabular inference
 
 from tqnn_client import TQNNClient
 import os
@@ -119,37 +143,37 @@ print(result)
 
 ---
 
-API Response Format
+📫 API Response Format
 
-A typical inference response:
+Example:
 
 {
   "mode": "TABULAR",
   "label": "demo_table",
   "probs": [0.18, 0.44, 0.38],
   "threshold": 0.613,
-  "qualia": "…",
-  "intent": "…",
+  "qualia": "...",
+  "intent": "...",
   "usage": 41
 }
 
-Notes:
+Notes
 
-threshold is a phase-space activation
+threshold — phase-space activation
 
-qualia is a substrate embedding snapshot
+qualia — substrate embedding snapshot
 
-intent is the decision geometry
+intent — decision geometry
 
-usage increments with each call
+usage — remaining quota counter
 
 
 
 ---
 
-Repository Contents
+📂 Repository Contents
 
-This repo includes:
+Included:
 
 API wrapper utilities
 
@@ -162,18 +186,28 @@ Integration examples
 Public demos
 
 
-This repo does not include the Core substrate or any internal algorithms.
+Not included:
+
+Core substrate
+
+Internal algorithms
+
+State inference systems
+
 
 
 ---
 
-Licensing
+🛡️ Licensing
 
 This project is dual-licensed.
 
-MIT License — Open Layer
 
-The MIT license applies to:
+---
+
+✔️ MIT License — Open Layer
+
+Applies to:
 
 API wrapper
 
@@ -186,7 +220,7 @@ Example scripts
 Public demos
 
 
-You may freely:
+You may:
 
 Use
 
@@ -202,7 +236,7 @@ See LICENSE.
 
 ---
 
-Proprietary License — Core IP Locked
+🔒 Proprietary License — Core IP Locked
 
 The following are closed-source and protected:
 
@@ -214,43 +248,61 @@ Spiral entanglement mesh
 
 GHZ cobordism inference circuits
 
-Qualia embedding and decision models
+Qualia and decision models
 
-Internal runtime and training pipelines
+Internal runtimes and training pipelines
 
 
-These systems remain sealed.
-Usage requires subscription tiers or an enterprise agreement.
+Usage requires:
+
+paid subscription
+or
+
+enterprise agreement
+
 
 See TQNN-Core-License.md.
 
 
 ---
 
-Important Notice
+⚠️ Important Notice
 
-This repository contains only the public API and client utilities.
-It does not contain the substrate logic, inference systems, or internal algorithms.
+This repository contains only:
 
-Attempting to:
+Public API layer
 
-reverse-engineer,
+Client utilities
 
-extract embeddings to train competitors,
-
-recreate GHZ logic,
-
-reconstruct substrate mechanisms
+Integration examples
 
 
-is considered trade secret infringement.
+It does not contain:
+
+Substrate logic
+
+GHZ inference systems
+
+Internal algorithms
+
+
+Attempts to:
+
+reverse-engineer the system
+
+recreate GHZ logic
+
+train competitor models on embeddings
+
+reconstruct substrate architecture
+
+
+constitute trade secret infringement.
 
 
 ---
 
-Billing Model
-
-Each API key has a monthly quota:
+💳 Billing Model
 
 Tier	Monthly Requests	Intended Use
 
@@ -265,13 +317,13 @@ Requests continue
 
 Per-unit billing applies
 
-No engine code is exposed
+Core engine remains sealed
 
 
 
 ---
 
-Roadmap
+🗺️ Roadmap
 
 PyPI client package
 
@@ -283,13 +335,13 @@ Android edge inference
 
 Enterprise substrate clusters
 
-GPU acceleration for large input matrices
+GPU acceleration
 
 
 
 ---
 
-Contact
+📬 Contact
 
 For enterprise licensing and integration:
 
@@ -313,12 +365,14 @@ It does not provide:
 
 The substrate
 
-The inference algorithms
+The inference models
 
-The architectural source
+The architecture
 
 
 The Core remains sealed.
 
 
 ---
+
+End of README
