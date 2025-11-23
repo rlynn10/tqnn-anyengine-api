@@ -2,6 +2,9 @@ NOTICE: The TQNN Core Engine is a protected trade secret.
 This repository contains only the API interface and client utilities.
 No inference substrate or architectural logic is present.
 
+Unauthorized attempts to extract, replicate, or reverse-engineer substrate logic
+will result in immediate access termination and legal action.
+
 🔹 TQNN AnyEngine API
 
 Public SaaS API for TQNN AnyEngine
