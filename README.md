@@ -379,5 +379,10 @@ The Core remains sealed.
 
 ---
 
+Built by TQNN Labs — A solo research effort.
+Contact: tqnnlabs@gmail.com
+
+---
+
 🔗 Live Endpoint (Coming Soon)
 https://api.tqnn.dev
