@@ -3,6 +3,10 @@ Public SaaS API for TQNN AnyEngine (EEG / Finance / Tabular / Any-Data)
 
 TQNN is patent-pending. All proprietary components are protected.
 
+The TQNN Core Engine and its internal algorithms are protected as trade secrets.
+Any disclosure, extraction, or replication of internal mechanisms is a violation
+of intellectual property law and licensing terms.
+
 ## Licensing
 
 This project is **dual-licensed**:
